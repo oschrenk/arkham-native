@@ -26,6 +26,8 @@ class NumberPicker extends React.Component {
     return (
       <View>
         <Text>Picker</Text>
+        <Image source={require('./img/damage-vertical.png')} style={{width: 120, height: 140}}>
+        </Image>
       </View>
     )
   }
