@@ -25,15 +25,23 @@ class NumberPicker extends React.Component {
 
   render() {
     return (
-      <View>
-        <Text>Picker</Text>
-        <Image source={require('./img/damage-vertical.png')} style={{width: 120, height: 140}}>
-        </Image>
+      <Image source={require('./img/damage-vertical.png')} style={counterStyles.container}>
+        <Text>-</Text>
+        <Text>+</Text>
         <Text>{this.props.counter}</Text>
-      </View>
+      </Image>
     )
   }
 }
+
+const counterStyles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    width: 110,
+    height: 80
+  }
+})
 
 const styles = StyleSheet.create({
   container: {
