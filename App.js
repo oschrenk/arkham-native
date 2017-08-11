@@ -22,12 +22,15 @@ export default class App extends React.Component {
 }
 
 class NumberPicker extends React.Component {
+  counter = 5
+
   render() {
     return (
       <View>
         <Text>Picker</Text>
         <Image source={require('./img/damage-vertical.png')} style={{width: 120, height: 140}}>
         </Image>
+        <Text>{this.counter}</Text>
       </View>
     )
   }
