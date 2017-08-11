@@ -14,7 +14,7 @@ export default class App extends React.Component {
           <Text>Open up App.js to start working on your app!</Text>
           <Text>Changes yofoooou make will automatically reload.</Text>
           <Text>Shake your phone to open the developer menu.</Text>
-          <NumberPicker/>
+          <NumberPicker counter='5'/>
         </View>
       </Image>
     );
@@ -22,7 +22,6 @@ export default class App extends React.Component {
 }
 
 class NumberPicker extends React.Component {
-  counter = 5
 
   render() {
     return (
@@ -30,7 +29,7 @@ class NumberPicker extends React.Component {
         <Text>Picker</Text>
         <Image source={require('./img/damage-vertical.png')} style={{width: 120, height: 140}}>
         </Image>
-        <Text>{this.counter}</Text>
+        <Text>{this.props.counter}</Text>
       </View>
     )
   }
