@@ -5,9 +5,31 @@ import {
   Text,
   View
 } from 'react-native';
+import {
+  Font,
+  AppLoading
+} from 'expo'
 
 export default class App extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      fontLoaded: false
+    }
+  }
+
+  async componentDidMount() {
+    await Font.loadAsync({
+      "arkham": require('./fonts/arkham.ttf')
+    })
+    this.setState({ fontLoaded: true })
+  }
+
   render() {
+    if (!this.state.fontLoaded) {
+      return <AppLoading />
+    }
     return (
       <Image source={require('./img/background.png')} style={styles.backgroundImage}>
         <View style={styles.container}>
@@ -42,6 +64,7 @@ const counterStyles = StyleSheet.create({
     alignItems: 'center',
   },
   overlay: {
+    fontFamily: "arkham",
     position: 'absolute',
     left: 0,
     top: 30,
