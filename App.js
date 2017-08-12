@@ -28,6 +28,7 @@ export default class App extends React.Component {
 
   render() {
     if (!this.state.fontLoaded) {
+      console.log('font loaded')
       return <AppLoading />
     }
     return (
@@ -48,9 +49,9 @@ class NumberPicker extends React.Component {
   render() {
     return (
       <Image source={require('./img/damage-vertical.png')} style={counterStyles.container}>
-        <Text style={[counterStyles.half, counterStyles.left]}>-</Text>
-        <Text style={[counterStyles.half, counterStyles.right]}>+</Text>
-        <Text style={counterStyles.overlay}>{this.props.counter}</Text>
+        <Text style={[counterStyles.half, counterStyles.left]} onPress={() => console.log('1st')}>-</Text>
+        <Text style={[counterStyles.half, counterStyles.right]} onPress={() => console.log('2nd')}>+</Text>
+        <Text pointerEvents="none" style={counterStyles.overlay} >{this.props.counter}</Text>
       </Image>
     )
   }
@@ -82,8 +83,7 @@ const counterStyles = StyleSheet.create({
     top: 20,
     right: 0,
     bottom: 0,
-    textAlign: 'center',
-
+    textAlign: 'center'
   }
 })
 
