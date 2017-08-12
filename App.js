@@ -48,8 +48,8 @@ class NumberPicker extends React.Component {
   render() {
     return (
       <Image source={require('./img/damage-vertical.png')} style={counterStyles.container}>
-        <Text style={counterStyles.left}>-</Text>
-        <Text style={counterStyles.right}>+</Text>
+        <Text style={[counterStyles.half, counterStyles.left]}>-</Text>
+        <Text style={[counterStyles.half, counterStyles.right]}>+</Text>
         <Text style={counterStyles.overlay}>{this.props.counter}</Text>
       </Image>
     )
@@ -63,15 +63,15 @@ const counterStyles = StyleSheet.create({
     height: 80,
     alignItems: 'center',
   },
-  left: {
+  half:{
     flex: 1,
-    textAlign: 'left',
     fontFamily: 'arkham'
   },
+  left: {
+    textAlign: 'left'
+  },
   right: {
-    flex: 1,
-    textAlign: 'right',
-    fontFamily: 'arkham',
+    textAlign: 'right'
   },
   overlay: {
     fontFamily: 'arkham',
