@@ -65,6 +65,7 @@ const counterStyles = StyleSheet.create({
   },
   half:{
     flex: 1,
+    fontSize: 40,
     fontFamily: 'arkham'
   },
   left: {
@@ -74,10 +75,11 @@ const counterStyles = StyleSheet.create({
     textAlign: 'right'
   },
   overlay: {
+    fontSize: 40,
     fontFamily: 'arkham',
     position: 'absolute',
     left: 0,
-    top: 30,
+    top: 20,
     right: 0,
     bottom: 0,
     textAlign: 'center',
