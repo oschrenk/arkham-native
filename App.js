@@ -21,7 +21,7 @@ export default class App extends React.Component {
 
   async componentDidMount() {
     await Font.loadAsync({
-      "arkham": require('./fonts/arkham.ttf')
+      "arkham": require('./assets/fonts/arkham.ttf')
     })
     this.setState({ fontLoaded: true })
   }
