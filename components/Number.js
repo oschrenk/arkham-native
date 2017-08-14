@@ -25,7 +25,7 @@ export default class NumberPicker extends React.Component {
 
   render() {
     return (
-      <Image source={require('../img/damage-vertical.png')} style={counterStyles.container}>
+      <Image source={this.props.backgroundImage} style={counterStyles.container}>
         <Text style={[counterStyles.half, counterStyles.left]} onPress={this.decrement.bind(this)}>-</Text>
         <Text style={[counterStyles.half, counterStyles.right]} onPress={this.increment.bind(this)}>+</Text>
         <Text pointerEvents="none" style={counterStyles.overlay} >{this.state.counter}</Text>

@@ -33,12 +33,12 @@ export default class App extends React.Component {
       return <AppLoading />
     }
     return (
-      <Image source={require('./img/background.png')} style={styles.backgroundImage}>
+      <Image source={require('./assets/img/background.png')} style={styles.backgroundImage}>
         <View style={styles.container}>
           <Text>Open up App.js to start working on your app!</Text>
           <Text>Changes yofoooou make will automatically reload.</Text>
           <Text>Shake your phone to open the developer menu.</Text>
-          <NumberPicker counter='5'/>
+          <NumberPicker counter='5' backgroundImage={require('./assets/img/damage-vertical.png')}/>
         </View>
       </Image>
     );
