@@ -69,7 +69,7 @@ export default class RandomPicker extends React.Component {
 
 const randomStyles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     width: 110,
     height: 80,
     alignItems: 'center',
