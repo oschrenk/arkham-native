@@ -32,11 +32,7 @@ export default class RandomPicker extends React.Component {
         lastResults: oldResults,
         bag: oldBag
       })
-      console.log(this.state)
     } else {
-      console.log("no hidden");
-      console.log(this.state)
-
       var oldResults = this.state.lastResults;
       if (oldResults.length >= 3) {
         oldResults.shift();
