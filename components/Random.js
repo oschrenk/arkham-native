@@ -57,11 +57,24 @@ export default class RandomPicker extends React.Component {
     return this.state.token == HIDDEN_TOKEN;
   }
 
+  pretty(){
+    console.log("b", this.state.lastResults.length);
+    let pretty = "";
+    for(var i = 0; i <= this.state.lastResults.length -1; i++) {
+      console.log("l", this.state.lastResults.length, i);
+      pretty += this.state.lastResults[i];
+      if (i != this.state.lastResults.length - 1) {
+        pretty += ", ";
+      }
+    }
+    return pretty;
+  }
+
   render() {
     return (
       <View style={randomStyles.container}>
         <Text style={randomStyles.main} onPress={this.randomize.bind(this)}>{this.state.token}</Text>
-        <Text style={randomStyles.last}>{this.state.lastResults}</Text>
+        <Text style={randomStyles.last}>{this.pretty()}</Text>
       </View>
     )
   }
