@@ -58,10 +58,8 @@ export default class RandomPicker extends React.Component {
   }
 
   pretty(){
-    console.log("b", this.state.lastResults.length);
     let pretty = "";
     for(var i = 0; i <= this.state.lastResults.length -1; i++) {
-      console.log("l", this.state.lastResults.length, i);
       pretty += this.state.lastResults[i];
       if (i != this.state.lastResults.length - 1) {
         pretty += ", ";
