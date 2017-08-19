@@ -13,7 +13,7 @@ export default class RandomPicker extends React.Component {
     this.state = {
       token: " ",
       lastResults: [],
-      bag: this.tokenBag
+      bag: ["+1", "+1", "0", "0", "0", "-1", "-1", "-1", "-2", "-2", "s", "s", "c" , "t" , "f", "e" ]
     };
   }
 
@@ -34,12 +34,12 @@ export default class RandomPicker extends React.Component {
     return this.token == " ";
   }
 
-
   render() {
     return (
-        <View style={randomStyles.container}>
-          <Text>Random</Text>
-        </View>
+      <View style={randomStyles.container}>
+        <Text style={randomStyles.main}>s</Text>
+        <Text style={randomStyles.last}>e</Text>
+      </View>
     )
   }
 }
@@ -51,26 +51,14 @@ const randomStyles = StyleSheet.create({
     height: 80,
     alignItems: 'center',
   },
-  half:{
+  main:{
     flex: 1,
     fontSize: 40,
     fontFamily: 'arkham'
   },
-  left: {
-    textAlign: 'left'
-  },
-  right: {
-    textAlign: 'right'
-  },
-  overlay: {
-    fontSize: 40,
-    fontFamily: 'arkham',
-    position: 'absolute',
-    left: 0,
-    top: 20,
-    right: 0,
-    bottom: 0,
-    textAlign: 'center'
+  last: {
+    fontSize: 20,
+    fontFamily: 'arkham'
   }
 })
 
