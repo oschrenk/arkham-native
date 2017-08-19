@@ -39,16 +39,16 @@ export default class App extends React.Component {
           <Text>Stuff</Text>
         </View>
         <View style={styles.container}>
-          <NumberPicker counter='5' backgroundImage={require('./assets/img/damage-vertical.png')}/>
-          <NumberPicker counter='5' backgroundImage={require('./assets/img/damage-vertical.png')}/>
+          <NumberPicker counter='0' backgroundImage={require('./assets/img/doom.png')}/>
+          <NumberPicker counter='0' backgroundImage={require('./assets/img/clue.png')}/>
         </View>
         <View style={styles.container}>
           <RandomPicker/>
         </View>
         <View style={styles.container}>
-          <NumberPicker counter='5' backgroundImage={require('./assets/img/damage-vertical.png')}/>
-          <NumberPicker counter='5' backgroundImage={require('./assets/img/damage-vertical.png')}/>
-          <NumberPicker counter='5' backgroundImage={require('./assets/img/damage-vertical.png')}/>
+          <NumberPicker counter='0' backgroundImage={require('./assets/img/damage-vertical.png')}/>
+          <NumberPicker counter='5' backgroundImage={require('./assets/img/resource.png')}/>
+          <NumberPicker counter='0' backgroundImage={require('./assets/img/horror.png')}/>
         </View>
       </Image>
     );
