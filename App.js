@@ -35,9 +35,18 @@ export default class App extends React.Component {
     return (
       <Image source={require('./assets/img/background.png')} style={styles.backgroundImage}>
         <View style={styles.container}>
-          <Text>Open up App.js to start working on your app!</Text>
-          <Text>Changes yofoooou make will automatically reload.</Text>
-          <Text>Shake your phone to open the developer menu.</Text>
+          <Text>Stuff</Text>
+        </View>
+        <View style={styles.container}>
+          <NumberPicker counter='5' backgroundImage={require('./assets/img/damage-vertical.png')}/>
+          <NumberPicker counter='5' backgroundImage={require('./assets/img/damage-vertical.png')}/>
+        </View>
+        <View style={styles.container}>
+          <NumberPicker counter='5' backgroundImage={require('./assets/img/damage-vertical.png')}/>
+        </View>
+        <View style={styles.container}>
+          <NumberPicker counter='5' backgroundImage={require('./assets/img/damage-vertical.png')}/>
+          <NumberPicker counter='5' backgroundImage={require('./assets/img/damage-vertical.png')}/>
           <NumberPicker counter='5' backgroundImage={require('./assets/img/damage-vertical.png')}/>
         </View>
       </Image>
@@ -48,7 +57,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: 'stretch',
+    flexDirection: 'row',
     justifyContent: 'center',
     backgroundColor: 'rgba(0,0,0,0)'
   },
