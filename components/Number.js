@@ -25,11 +25,12 @@ export default class NumberPicker extends React.Component {
 
   render() {
     return (
-      <Image source={this.props.backgroundImage} style={counterStyles.container}>
+      <View source={this.props.backgroundImage} style={counterStyles.container}>
+        <Image source={this.props.backgroundImage} style={counterStyles.image}/>
         <Text style={[counterStyles.half, counterStyles.left]} onPress={this.decrement.bind(this)}>-</Text>
         <Text style={[counterStyles.half, counterStyles.right]} onPress={this.increment.bind(this)}>+</Text>
         <Text pointerEvents="none" style={counterStyles.overlay} >{this.state.counter}</Text>
-      </Image>
+      </View>
     )
   }
 }
@@ -40,6 +41,16 @@ const counterStyles = StyleSheet.create({
     width: 110,
     height: 80,
     alignItems: 'center',
+  },
+  image: {
+    width: "35%",
+    height: "35%",
+    resizeMode: "contain",
+    position: 'absolute',
+    left: 0,
+    top: 10,
+    right: 0,
+    bottom: 0,
   },
   half:{
     flex: 1,
