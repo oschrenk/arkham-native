@@ -10,6 +10,7 @@ import {
   AppLoading
 } from 'expo'
 import NumberPicker from './components/Number'
+import RandomPicker from './components/Random'
 
 export default class App extends React.Component {
 
@@ -42,7 +43,7 @@ export default class App extends React.Component {
           <NumberPicker counter='5' backgroundImage={require('./assets/img/damage-vertical.png')}/>
         </View>
         <View style={styles.container}>
-          <NumberPicker counter='5' backgroundImage={require('./assets/img/damage-vertical.png')}/>
+          <RandomPicker/>
         </View>
         <View style={styles.container}>
           <NumberPicker counter='5' backgroundImage={require('./assets/img/damage-vertical.png')}/>
