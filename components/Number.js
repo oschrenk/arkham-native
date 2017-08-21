@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Image,
   StyleSheet,
+  StatusBar,
   Text,
   View
 } from 'react-native';
@@ -26,6 +27,7 @@ export default class NumberPicker extends React.Component {
   render() {
     return (
       <View source={this.props.backgroundImage} style={counterStyles.container}>
+        <StatusBar hidden />
         <Image source={this.props.backgroundImage} style={counterStyles.image}/>
         <Text style={[counterStyles.half, counterStyles.left]} onPress={this.decrement.bind(this)}>-</Text>
         <Text style={[counterStyles.half, counterStyles.right]} onPress={this.increment.bind(this)}>+</Text>
