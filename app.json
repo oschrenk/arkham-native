@@ -1,4 +1,6 @@
 {
+  "name": "Arkham",
+  "displayName": "Arkham Solo",
   "expo": {
     "sdkVersion": "19.0.0"
   }
