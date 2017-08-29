@@ -5,10 +5,6 @@ import {
   Text,
   View
 } from 'react-native';
-import {
-  Font,
-  AppLoading
-} from 'expo'
 import NumberPicker from './components/Number'
 import RandomPicker from './components/Random'
 
@@ -22,17 +18,9 @@ export default class App extends React.Component {
   }
 
   async componentDidMount() {
-    await Font.loadAsync({
-      "arkham": require('./assets/fonts/arkham.ttf')
-    })
-    this.setState({ fontLoaded: true })
   }
 
   render() {
-    if (!this.state.fontLoaded) {
-      console.log('font loaded')
-      return <AppLoading />
-    }
     return (
       <Image source={require('./assets/img/background.png')} style={styles.backgroundImage}>
         <View style={styles.container}>
